@@ -3,8 +3,8 @@ var express = require('express'),
     path = require('path'),
     bodyParser = require('body-parser'),
     routes = require('./server/routes/web'), //web routes
-    apiRoutes = require('./server/routes/api'), //api routes
-    connection = require("./server/config/db"); //mongodb connection
+    apiRoutes = require('./server/routes/api'); //api routes
+    //connection = require("./server/config/db"); //mongodb connection
 
 // creating express server
 var app = express();
@@ -32,6 +32,6 @@ app.use('/api', apiRoutes);
 var port = process.env.port || 3000;
 
 // starting express server
-app.listen(port, function() {
+app.listen(port, '127.0.0.1', function() {
     console.log("Server is running at : http://localhost:" + port);
 });

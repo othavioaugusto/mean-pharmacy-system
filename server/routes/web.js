@@ -9,4 +9,9 @@ router.get('/', function(req, res, next) {
     res.sendFile(absPath + "/login.html");
 });
 
+// route to handle home page
+router.get('/teste_retorno_wsa', function(req, res, next) {
+    res.send({nome:'othavio', pais:'brasil'})
+});
+
 module.exports = router;

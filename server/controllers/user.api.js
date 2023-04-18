@@ -19,6 +19,8 @@ router.get("/", function(req, res) {
         }
         res.send(data[0]);
     });
+}).get("/teste_retorno_wsa", function(req, res) {
+    res.send("Testandooooooo");
 }).post("/", function(req, res) {
     var obj = req.body;
     var model = new user(obj);
